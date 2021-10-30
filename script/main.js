@@ -49,7 +49,7 @@ $(document).ready(function () {
 });
 
 function search(inputVal){
-  let tvmaze = "http://api.tvmaze.com/search/shows?q=" + inputVal;
+  let tvmaze = "https://api.tvmaze.com/search/shows?q=" + inputVal;
   const tvmazeReques = fetch(tvmaze).then(function (response) {
     return response.json()
   }).then(function (data){
@@ -81,7 +81,7 @@ function showOnPage() {
 }
 
 function getTop50(){
-  let showMaze = "http://api.tvmaze.com/shows";
+  let showMaze = "https://api.tvmaze.com/shows";
   const showMazeResponse = fetch(showMaze).then(function (response){
     return response.json()
   }).then(function (data) {
@@ -113,7 +113,7 @@ function displayTop50(){
 }
 
 function getTop10(){
-  const top10 = "http://api.tvmaze.com/shows";
+  const top10 = "https://api.tvmaze.com/shows";
   const top10Respond = fetch(top10).then(function(response){
     return response.json()
   }).then(function (response) {

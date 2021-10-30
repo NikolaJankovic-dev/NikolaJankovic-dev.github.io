@@ -46,7 +46,7 @@ $(document).ready(function () {
 });
 
 function getShow(showName) {
-  const show = "http://api.tvmaze.com/singlesearch/shows?q=" + showName;
+  const show = "https://api.tvmaze.com/singlesearch/shows?q=" + showName;
   const showResponse = fetch(show).then(function (response){
     return response.json()
   }).then(function (response) {
@@ -58,7 +58,7 @@ function getShow(showName) {
     $title.html(showName);
 
     function getSeasons() {
-      const seasons = "http://api.tvmaze.com/shows/" + response.id + "/seasons";
+      const seasons = "https://api.tvmaze.com/shows/" + response.id + "/seasons";
       const seasonsResponse = fetch(seasons)
         .then(function (response) {
           return response.json();
@@ -78,7 +78,7 @@ function getShow(showName) {
     }
 
     function getAka() {
-      const aka = "http://api.tvmaze.com/shows/" + response.id + "/akas";
+      const aka = "https://api.tvmaze.com/shows/" + response.id + "/akas";
       const akaResponse = fetch(aka)
         .then(function (response) {
           return response.json();
@@ -92,7 +92,7 @@ function getShow(showName) {
     }
 
     function getCast() {
-      const cast = "http://api.tvmaze.com/shows/" + response.id + "/cast";
+      const cast = "https://api.tvmaze.com/shows/" + response.id + "/cast";
       const castResponse = fetch(cast)
         .then(function (response) {
           return response.json();
